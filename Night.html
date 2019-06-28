@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Night</title>
+</head>
+<body>
+    
+	<nav id="overlay">
+		
+        <img src="style/images/Close.svg" class="close-btn" id="close-menu">
+        
+        <ul>
+            <li>
+                <a href="index.html">Gallery</a>
+            </li>
+            <li>
+                <a href="CameraObscura.html">CameraObscura</a>
+            </li>
+            <li>
+                <a href="LightPainting.html">LightPainting</a>
+            </li>
+            <li>
+                <a href="Lumograph.html">Lomography</a>
+            </li>
+            <li>
+                <a href="Mood.html">Mood</a>
+            </li>
+            <li>
+                <a href="Night.html">Night</a>
+            </li>
+            <li>
+                <a href="Sparetime.html">Sparetime</a>
+            </li>
+            <li>
+                <a href="Contacts.html">Contact</a>
+            </li>
+        </ul>
+	</nav>
+
+	<header>
+		<a href="index.html" class="logo">_NickMartin_ <br>Photography</a>
+		<img src="style/images/Menu.svg" class="menu-btn" id="open-menu">
+	</header>
+
+	<section>
+		<h1>Night</h1>
+	</section>
+
+    <script>
+        var overlay = document.getElementById('overlay');
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function(){
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function(){
+            overlay.classList.remove('show-menu');
+        })
+
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+            showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+    </script>
+
+    <div class="homeText">
+        <h2>Showing the beauty of the city lights.</h2>
+    </div>
+
+    <div class="Start">
+        <img src="style/Images/Night_Photography/NP 1.jpg">
+        <h3>Welly Harbour</h3>
+        <p>24th May, 2018<br>
+        This was the first attempt at night photography to try and get the reflections of lights in Oriental bay on the water. I chose to have the stone slabs in the picture to have a contrast originally, but found that they made to be a good feature in the images.</p>
+        <img src="style/Images/Night_Photography/NP 2.jpg">
+        <h3>Silhouette</h3>
+        <p>24th May, 2018<br>
+        I was attempting to use the bath house steam to create a silhouette of a person, but due to the lighting in the backgound and foreground the images came out like this.</p>
+        <img src="style/Images/Night_Photography/NP 3.jpg">
+        <h3>The Bucket Fountain</h3>
+        <p>24th May, 2018<br>
+        I wanted to get a vibrant image of the Cuba Street Bucket Fountain as it is an iconic piece to wellington. I wanted at least one image of an iconic thing in Wellington while I live there.</p>
+        <img src="style/Images/Night_Photography/NP 4.jpg">
+        <h3>The Moon of Art</h3>
+        <p>24th May, 2018<br>
+        I found this really cool sculpture in Oriental Bay and wanted to line the moon up in the middle of it. I found that the moon was too bright but it was still a really cool picture.</p>
+        <img src="style/Images/Night_Photography/NP 5.jpg">
+        <h3>Fading People</h3>
+        <p>24th May, 2018<br>
+        I was attempting to try a fading technique I read up on and this was the outcome. I thought it was quite crisp considering there was movement in the image. </p>
+        <img src="style/Images/Night_Photography/NP 6.jpg">
+        <h3>The Caged Boat</h3>
+        <p>24th May, 2018<br>
+        This was my favourite image of the Night shoot. It is vibrant in colour and really shows how calm the water was that night. The lights from the city reflecting off the water was just a massive bonus for me.</p>
+        <img src="style/Images/Night_Photography/NP 7.jpg">
+        <h3>O-Bay Warf on a Calm Night </h3>
+        <p>24th May, 2018<br>
+        I attempted to get wellington city and iots reflections off the warf and make it symmetrical. I enjoy looking at the blues and yellows in the image.</p>
+        <img src="style/Images/Night_Photography/NP 8.jpg">
+        <h3>City Reflection</h3>
+        <p>24th May, 2018<br>
+        I tryed again with reflecting the colours off the water and this was the outcome.</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Night_Photography/NP 8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+      <div class="numbertext">1 / 8</div>
+      <img src="style/Images/Night_Photography/NP 1.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">2 / 8</div>
+      <img src="style/Images/Night_Photography/NP 2.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">3 / 8</div>
+      <img src="style/Images/Night_Photography/NP 3.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">4 / 8</div>
+      <img src="style/Images/Night_Photography/NP 4.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">5 / 8</div>
+      <img src="style/Images/Night_Photography/NP 5.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 8</div>
+      <img src="style/Images/Night_Photography/NP 6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 8</div>
+      <img src="style/Images/Night_Photography/NP 7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 8</div>
+      <img src="style/Images/Night_Photography/NP 8.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 1.jpg" onclick="currentSlide(1)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 2.jpg" onclick="currentSlide(2)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 3.jpg" onclick="currentSlide(3)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 4.jpg" onclick="currentSlide(4)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 5.jpg" onclick="currentSlide(5)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 6.jpg" onclick="currentSlide(6)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 7.jpg" onclick="currentSlide(7)" alt="Night">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Night_Photography/NP 8.jpg" onclick="currentSlide(8)" alt="Night">
+    </div>
+</div>
+</div>
+
+    <div class="footer">
+    <div class="logos">
+        <a href="https://www.instagram.com/nick_martin_designs/">
+            <img src="style/Images/InstagramLogo.png">
+        </a>
+        <a href="https://www.flickr.com/photos/159638855@N03/">
+            <img src="style/Images/FlickrLogo.png">
+        </a>      
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Lomography</title>
+</head>
+<body>
+    
+	<nav id="overlay">
+		
+        <img src="style/images/Close.svg" class="close-btn" id="close-menu">
+        
+        <ul>
+            <li>
+                <a href="index.html">Gallery</a>
+            </li>
+            <li>
+                <a href="CameraObscura.html">CameraObscura</a>
+            </li>
+            <li>
+                <a href="LightPainting.html">LightPainting</a>
+            </li>
+            <li>
+                <a href="Lumograph.html">Lomography</a>
+            </li>
+            <li>
+                <a href="Mood.html">Mood</a>
+            </li>
+            <li>
+                <a href="Night.html">Night</a>
+            </li>
+            <li>
+                <a href="Sparetime.html">Sparetime</a>
+            </li>
+            <li>
+                <a href="Contacts.html">Contact</a>
+            </li>
+        </ul>
+	</nav>
+
+	<header>
+		<a href="index.html" class="logo">_NickMartin_ <br>Photography</a>
+		<img src="style/images/Menu.svg" class="menu-btn" id="open-menu">
+	</header>
+
+	<section>
+		<h1>Lomography</h1>
+	</section>
+
+    <script>
+        var overlay = document.getElementById('overlay');
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function(){
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function(){
+            overlay.classList.remove('show-menu');
+        })
+
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+            showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+    </script>
+
+    <div class="homeText">
+        <h2>Exploring vintage photography and trialing with film.</h2>
+    </div>
+
+    <div class="Start">
+        <img src="style/Images/Lumograph/F 1.jpg">
+        <h3>An 80s View</h3>
+        <p>9th June, 2018<br>
+        A view of the city from balcony using an old film camera.</p>
+        <img src="style/Images/Lumograph/F 2.jpg">
+        <h3>Winter Surfing #1</h3>
+        <p>9th June, 2018<br>
+        My partner modelling on the playground.</p>
+        <img src="style/Images/Lumograph/F 3.jpg">
+        <h3>Winter Surfing #2</h3>
+        <p>9th June, 2018<br>
+        My partner modelling on the playground.</p>
+        <img src="style/Images/Lumograph/F 4.jpg">
+        <h3>Midday Run</h3>
+        <p>9th June, 2018<br>
+        Taking pictures of the dog on the beach. The people were running with the dog because they wanted to be like the dog.</p>
+        <img src="style/Images/Lumograph/F 6.jpg">
+        <h3>Crashing Waves</h3>
+        <p>9th June, 2018<br>
+        I wanted to see how moving waves would turn out in film and if they would be blurry.</p>
+        <img src="style/Images/Lumograph/F 7.jpg">
+        <h3>Singled Out</h3>
+        <p>9th June, 2018<br>
+        This seagull was following us up the beach obviously wanting some screentime or 2 seconds of fame.</p>
+        <img src="style/Images/Lumograph/F 8.jpg">
+        <h3>The Old Boatshed</h3>
+        <p>9th June, 2018<br>
+        The mural on this building looked quite unique. I thought that having it in a vintage shoot would add to it as it seemed like a modern painting.</p>
+        <img src="style/Images/Lumograph/F 9.jpg">
+        <h3>Too Many Gulls</h3>
+        <p>9th June, 2018<br>
+        More seagulls wanting more attention.</p>
+        <img src="style/Images/Lumograph/F 10.jpg">
+        <h3>Beach Hut</h3>
+        <p>9th June, 2018<br>
+        Found this pile of logs on the beach. We added some other logs to add too it to make a hut. It was not very wind resistant... </p>
+        <img src="style/Images/Lumograph/F 11.jpg">
+        <h3>Old vs New</h3>
+        <p>9th June, 2018<br>
+        Comparing the new mirrorless cameras to the old ones.</p>
+        <img src="style/Images/Lumograph/F 13.jpg">
+        <h3>A Collection of Things </h3>
+        <p>10th June, 2018<br>
+        Thought is looked cool and wanted to show this collection of things through film</p>
+        <img src="style/Images/Lumograph/F 12.jpg">
+        <h3>Index</h3>
+        <p>9th June, 2018<br>
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="style/Images/Lumograph/F 1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="style/Images/Lumograph/F 6.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 7.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 8.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 9.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="style/Images/Lumograph/F 10.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
+        </div>
+    
+        <div class="column">
+            <img src="style/Images/Lumograph/F 11.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 13.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="style/Images/Lumograph/F 12.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="style/Images/Lumograph/F 1.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="style/Images/Lumograph/F 2.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="style/Images/Lumograph/F 3.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="style/Images/Lumograph/F 4.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="style/Images/Lumograph/F 6.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="style/Images/Lumograph/F 7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="style/Images/Lumograph/F 8.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="style/Images/Lumograph/F 9.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <img src="style/Images/Lumograph/F 10.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <img src="style/Images/Lumograph/F 11.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <img src="style/Images/Lumograph/F 13.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <img src="style/Images/Lumograph/F 12.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 1.jpg" onclick="currentSlide(1)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 2.jpg" onclick="currentSlide(2)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 3.jpg" onclick="currentSlide(3)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 4.jpg" onclick="currentSlide(4)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 6.jpg" onclick="currentSlide(5)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 7.jpg" onclick="currentSlide(6)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 8.jpg" onclick="currentSlide(7)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 9.jpg" onclick="currentSlide(8)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 10.jpg" onclick="currentSlide(9)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 11.jpg" onclick="currentSlide(10)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 13.jpg" onclick="currentSlide(11)" alt="Lomography">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="style/Images/Lumograph/F 12.jpg" onclick="currentSlide(12)" alt="Lomography">
+    </div>
+</div>
+</div>
+
+    <div class="footer">
+    <div class="logos">
+        <a href="https://www.instagram.com/nick_martin_designs/">
+            <img src="style/Images/InstagramLogo.png">
+        </a>
+        <a href="https://www.flickr.com/photos/159638855@N03/">
+            <img src="style/Images/FlickrLogo.png">
+        </a>      
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html{
+	font-family: 'Montserrat';
+	margin: 0;
+    background-color: rgb(241, 241, 241);
+	a{
+		text-decoration: none;
+	}
+}
+
+header{
+	padding: 2em;
+
+	.logo{
+		color: rgb(94, 93, 93);
+		font-weight: bold;
+	}
+
+	.menu-btn{
+		width: 25px;
+		float: right;
+		cursor: pointer;
+    }
+}
+
+section{
+   padding: 4em;
+   
+   h1{
+       font-size: 4em;
+       margin: 1em, auto;
+       margin-left: 12%;
+       margin-top: -9%;
+       width: 75%;
+       text-align: center;
+
+   }
+   
+}
+
+nav{
+    position: absolute;
+    background: rgb(94, 93, 93);;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+
+    .close-btn {
+        width: 18px;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 10% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        width: 80%;
+    }
+
+    a{
+        color: white;
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+
+    li{
+        opacity: 0;
+    }
+}
+
+.show-menu{
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+
+    .close-btn{
+        animation: show-x 1s 1s forwards;
+    }
+
+    li:nth-of-type(1){
+        animation: menu-item-anim .6s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2){
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3){
+        animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(4){
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+    }
+}
+
+@keyframes slide-menu{
+    from{
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-item-anim{
+    from{
+        transform: translateY(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.homeText h2{
+    margin-top: -5%;
+    text-align: center;
+    color: rgb(94, 93, 93);
+    margin-left: 0%;
+    font-size: 1.2em;
+}
+
+.home_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+    img{
+        width: 100%;
+    }
+
+    h3{
+        font-size: 1.4em
+    }
+
+    h4{
+        font-weight: bold;
+        font-size: .8em;
+        color: rgb(73, 73, 73)
+    }
+    
+    h5{
+        font-weight: 100;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: block;
+    }
+    
+}
+
+.column{
+    float: left;
+    width: 30%;
+    padding:20px;
+    
+    
+
+    .row::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    img{
+        width:100%;
+        height: auto;
+    }
+
+}

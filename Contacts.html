@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Contact</title>
+</head>
+<body>
+    
+	<nav id="overlay">
+		
+        <img src="style/images/Close.svg" class="close-btn" id="close-menu">
+        
+        <ul>
+            <li>
+                <a href="index.html">Gallery</a>
+            </li>
+            <li>
+                <a href="CameraObscura.html">CameraObscura</a>
+            </li>
+            <li>
+                <a href="LightPainting.html">LightPainting</a>
+            </li>
+            <li>
+                <a href="Lumograph.html">Lomography</a>
+            </li>
+            <li>
+                <a href="Mood.html">Mood</a>
+            </li>
+            <li>
+                <a href="Night.html">Night</a>
+            </li>
+            <li>
+                <a href="Sparetime.html">Sparetime</a>
+            </li>
+            <li>
+                <a href="Contacts.html">Contact</a>
+            </li>
+        </ul>
+	</nav>
+
+	<header>
+		<a href="index.html" class="logo">_NickMartin_ <br>Photography</a>
+		<img src="style/images/Menu.svg" class="menu-btn" id="open-menu">
+	</header>
+
+	<section>
+		<h1>Contact</h1>
+	</section>
+
+    <script>
+        var overlay = document.getElementById('overlay');
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function(){
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function(){
+            overlay.classList.remove('show-menu');
+        })
+
+        $(document).ready(function() {
+            $('#bt1').click(function() {
+            $('#fr1').attr('action',
+                       'mailto:NickHEMartin@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val() + '&body=' + $('#tb3').val() + '&body=' + $('#subject').val());
+        $('#fr1').submit();
+    });
+});
+    </script>
+
+    <div class="homeText">
+        <h2>Feel free to contact me over email or message me on one of the social media platforms.</h2>
+    </div>
+
+    <div class="container">
+        <form action="action_page.php">
+
+        <label for="fname">Name</label>
+        <input type="text" id="tb1" name="firstname" placeholder="Your name..">
+
+        <label for="fname">Your Email</label>
+        <input type="text" id="tb2" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Subject</label>
+        <input type="text" id="tb3" name="lastname" placeholder="Subject..">
+
+        <label for="subject"></label>
+        <textarea id="subject" name="" placeholder="Write something.." style="height:200px"></textarea>
+
+        
+        <input type="button" value="Submit" id="bt1">
+        </form>
+    </div>
+
+    <div class="footer">
+    <div class="logos">
+        <a href="https://www.instagram.com/nick_martin_designs/">
+            <img src="style/Images/InstagramLogo.png">
+        </a>
+        <a href="https://www.flickr.com/photos/159638855@N03/">
+            <img src="style/Images/FlickrLogo.png">
+        </a>      
+    </div>
+</div>
+
+</body>
+</html>
