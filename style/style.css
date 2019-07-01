@@ -1,6 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
 body, html {
-  font-family: 'Montserrat';
+  font-family: "Helvetica", Arial, sans-serif;
   margin: 0;
   background-color: #f1f1f1;
   padding-bottom: 4%;
@@ -26,263 +26,122 @@ header .menu-btn {
   cursor: pointer;
 }
 
-section {
-  padding: 4em;
-}
-
-section h1 {
-  font-size: 4em;
-  margin: 1em, auto;
-  margin-left: 12%;
-  margin-top: -9%;
-  width: 75%;
+.mobile h1 {
+  text-transform: uppercase;
+  font-size: 3.2em;
   text-align: center;
-}
-
-@media only screen and (max-width: 600px){
-body{
-  padding-bottom: 20%;
-}
-
-header {
-  padding: 1em;}
-
-nav ul{
-  text-align: center;
-  list-style-type: none;
-  margin-top: 30%;
-  padding: 0;
-  }
-
-  nav li {
-    padding-bottom: -20px;
-  }
-
-  header .logo {
-    position: relative;
-  }
-
-  section h1 {
-    text-align: center;
-    margin-left: 0;
-    margin-top: 0%; 
-    margin-top: -20%;
-    padding-bottom: 0;
-  }
-
-  .homeText h2{
-  margin-top: -50%;
-  padding-bottom: 5%;
-  font-size: 1.0em;
-  margin-left: -10%;
-  margin-right: -10%;
-}
-
-.column img {
-  float: left;
-  width: 75%;
-  height: auto;
-  padding: 2%;
-}
-
-.row div{
   margin-left: -5%;
-  margin-right: -5%;
-  width: 50%;
-  padding:0;
+  margin-right: -5%; 
+  margin-top: 10%;
+  padding-bottom: 5%;
 }
-
-.row{
-  margin-right: -5%;
-  margin-left: 5%
-}
-
-
-}
-
-
-nav {
-  position: absolute;
-  background: #5e5d5d;
-  padding: 2em;
-  width: calc(100% - 4em);
-  height: calc(100vh - 4em);
-  display: none;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-}
-
-nav .close-btn {
-  width: 18px;
-  float: right;
-  cursor: pointer;
-  opacity: 0;
-}
-
-@media only screen and (min-width: 768px) {
-nav ul {
-  list-style-type: none;
-  margin: 30% auto 0 auto;
-  padding: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (2)[4];
-      grid-template-columns: repeat(4, auto);
-  width: 80%;
-}}
-
-nav a {
-  color: white;
-  font-weight: bold;
-  font-size: 1.8em;
-}
-
-nav li {
-  opacity: 0;
-  margin-bottom: 10%;
-}
-
-
-.show-menu {
-  display: block;
-  -webkit-animation: slide-menu 1s ease-in forwards;
-          animation: slide-menu 1s ease-in forwards;
-}
-
-.show-menu .close-btn {
-  -webkit-animation: show-x 1s 1s forwards;
-          animation: show-x 1s 1s forwards;
-}
-
-.show-menu li:nth-of-type(1) {
-  -webkit-animation: menu-item-anim .6s forwards 1s ease-in-out;
-          animation: menu-item-anim .6s forwards 1s ease-in-out;
-}
-
-.show-menu li:nth-of-type(2) {
-  -webkit-animation: menu-item-anim .6s forwards 1.2s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.2s ease-in-out;
-}
-
-.show-menu li:nth-of-type(3) {
-  -webkit-animation: menu-item-anim .6s forwards 1.4s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.4s ease-in-out;
-}
-
-.show-menu li:nth-of-type(4) {
-  -webkit-animation: menu-item-anim .6s forwards 1.6s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.6s ease-in-out;
-}
-
-.show-menu li:nth-of-type(5) {
-  -webkit-animation: menu-item-anim .6s forwards 1.8s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.8s ease-in-out;
-}
-
-.show-menu li:nth-of-type(6) {
-  -webkit-animation: menu-item-anim .6s forwards 2.0s ease-in-out;
-          animation: menu-item-anim .6s forwards 2.0s ease-in-out;
-}
-
-.show-menu li:nth-of-type(7) {
-  -webkit-animation: menu-item-anim .6s forwards 2.2s ease-in-out;
-          animation: menu-item-anim .6s forwards 2.2s ease-in-out;
-}
-
-.show-menu li:nth-of-type(8) {
-  -webkit-animation: menu-item-anim .6s forwards 2.4s ease-in-out;
-          animation: menu-item-anim .6s forwards 2.4s ease-in-out;
-}
-
-
-@-webkit-keyframes slide-menu {
-  from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes slide-menu {
-  from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@-webkit-keyframes show-x {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes show-x {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes menu-item-anim {
-  from {
-    -webkit-transform: translateY(60%);
-            transform: translateY(60%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes menu-item-anim {
-  from {
-    -webkit-transform: translateY(60%);
-            transform: translateY(60%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 
 .homeText{
+  font-family: "Courier New", Times, serif;
+  font-weight:normal;
   margin-top: -5%;
   padding-bottom: 5%;
   text-align: center;
   color: #5e5d5d;
-  font-size: 1.0em;
+  font-size: 0.8em;
   margin-left: 25%;
   margin-right: 25%;
 }
 
+
+/*discription text*/
+
 .Start{
+  font-family: "Courier New", Times, serif;
   text-align: center;
 }
 
+@media only screen and (min-width: 768px) {
 .Start p {
   padding-bottom: 7.5%;
   margin-left: 25%;
   margin-right:25%; 
+}}
+
+img.demo {
+  opacity: 0.6;
 }
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*footer*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5e5d5d;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.logos img{
+  width: 50px;
+  padding: 1%
+}
+
+
+/*Contacts page*/
+
+/* From www.w3school.com */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=button] {
+  background-color: #5e5d5d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 45%;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=button]:hover {
+  background-color: #828282;
+  color: #f1f1f1;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+/*Slides/galleries*/
 
 .column .row::after {
   content: "";
@@ -409,73 +268,254 @@ nav li {
   color: white;
 }
 
-img.demo {
-  opacity: 0.6;
+
+ /*Menu*/
+
+nav {
+  position: absolute;
+  background: #5e5d5d;
+  padding: 2em;
+  width: calc(100% - 4em);
+  height: calc(100vh - 4em);
+  display: none;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #5e5d5d;
-  color: #f1f1f1;
-  text-align: center;
-}
-
-.logos img{
-  width: 50px;
-  padding: 1%
-}
-
-/* From www.w3school.com */
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=button] {
-  background-color: #5e5d5d;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+nav .close-btn {
+  width: 18px;
+  float: right;
   cursor: pointer;
-  margin-left: 45%;
+  opacity: 0;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=button]:hover {
-  background-color: #828282;
-  color: #f1f1f1;
+@media only screen and (min-width: 768px) {
+nav ul {
+  list-style-type: none;
+  margin: 30% auto 0 auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2)[4];
+      grid-template-columns: repeat(4, auto);
+  width: 80%;
+}}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
+nav li {
+  opacity: 0;
+  margin-bottom: 10%;
+}
+
+.show-menu {
+  display: block;
+  -webkit-animation: slide-menu 1s ease-in forwards;
+          animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  -webkit-animation: show-x 1s 1s forwards;
+          animation: show-x 1s 1s forwards;
+}
+
+.show-menu li:nth-of-type(1) {
+  -webkit-animation: menu-item-anim .6s forwards 1s ease-in-out;
+          animation: menu-item-anim .6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-of-type(2) {
+  -webkit-animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+}
+
+.show-menu li:nth-of-type(3) {
+  -webkit-animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+}
+
+.show-menu li:nth-of-type(4) {
+  -webkit-animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+}
+
+.show-menu li:nth-of-type(5) {
+  -webkit-animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+}
+
+.show-menu li:nth-of-type(6) {
+  -webkit-animation: menu-item-anim .6s forwards 2.0s ease-in-out;
+          animation: menu-item-anim .6s forwards 2.0s ease-in-out;
+}
+
+.show-menu li:nth-of-type(7) {
+  -webkit-animation: menu-item-anim .6s forwards 2.2s ease-in-out;
+          animation: menu-item-anim .6s forwards 2.2s ease-in-out;
+}
+
+.show-menu li:nth-of-type(8) {
+  -webkit-animation: menu-item-anim .6s forwards 2.4s ease-in-out;
+          animation: menu-item-anim .6s forwards 2.4s ease-in-out;
+}
+
+
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/*Phone Mode*/
+
+@media only screen and (max-width: 600px){
+body{
+  padding-bottom: 20%;
+}
+
+header {
+  padding: 1em;}
+
+header .logo {
+  position: relative;
+}
+
+nav ul{
+  text-align: center;
+  list-style-type: none;
+  margin-top: 30%;
+  padding: 0;
+}
+
+  nav li {
+    padding-bottom: -20px;
+  }
+
+  .mobile h1 {
+    font-size: 2.0em;
+    text-align: center;
+    margin-left: -5%;
+    margin-right: -5%; 
+    margin-top: 10%;
+    padding-bottom: 0;
+  }
+
+  .homeText h2{
+  margin-top: 20%;
+  padding-bottom: 5%;
+  font-size: 1.4em;
+  margin-left: -15%;
+  margin-right: -15%;
+}
+
+.Start img{
+  width: 100%;
+}
+
+.Start{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.Start p{ 
+  font-size: 0.8em;
+  text-align: center;
+  padding-bottom: 7.5%;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+
+.column img {
+  float: left;
+  width: 75%;
+  height: auto;
+  padding: 2%;
+}
+
+.row div{
+  margin-left: -5%;
+  margin-right: -5%;
+  width: 50%;
+  padding:0;
+}
+
+.row{
+  margin-right: -5%;
+  margin-left: 5%
+}
+
+.mobile div {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 }
