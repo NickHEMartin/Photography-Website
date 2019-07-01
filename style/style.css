@@ -41,8 +41,12 @@ section h1 {
 
 @media only screen and (max-width: 600px){
 body{
-
+  padding-bottom: 20%;
 }
+
+header {
+  padding: 1em;}
+
 nav ul{
   text-align: center;
   list-style-type: none;
@@ -62,7 +66,37 @@ nav ul{
     text-align: center;
     margin-left: 0;
     margin-top: 0%; 
+    margin-top: -20%;
+    padding-bottom: 0;
   }
+
+  .homeText h2{
+  margin-top: -50%;
+  padding-bottom: 5%;
+  font-size: 1.0em;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.column img {
+  float: left;
+  width: 75%;
+  height: auto;
+  padding: 2%;
+}
+
+.row div{
+  margin-left: -5%;
+  margin-right: -5%;
+  width: 50%;
+  padding:0;
+}
+
+.row{
+  margin-right: -5%;
+  margin-left: 5%
+}
+
 
 }
 
